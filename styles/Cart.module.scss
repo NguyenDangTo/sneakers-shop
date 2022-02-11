@@ -1,0 +1,156 @@
+.container {
+    padding: 25px;
+    display: flex;
+    margin-top: 90px;
+
+    .left {
+        flex: 2;
+        margin-right: 20px;
+
+        .table {
+            width: 100%;
+            border-spacing: 20px;
+            border: 1px solid #000;
+
+            td,
+            th {
+                text-align: center;
+                align-items: center;
+                border: 1px solid #000;
+                border-radius: 10px;
+            }
+
+            .imgContainer {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                margin: auto;
+            }
+
+            .name {
+                font-weight: 500;
+                color: #d1411e;
+            }
+
+            .total {
+                font-weight: bold;
+                font-size: 18px;
+            }
+        }
+
+
+
+    }
+
+    .right {
+        flex: 1;
+
+        .wrapper {
+            width: 90%;
+            background-color: #fff;
+            border: 2px solid #333;
+            padding: 50px;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .title {
+                font-size: 29px;
+                color: #ff724f;
+            }
+
+            .totalText {
+
+                &__title {
+                    margin-right: 10px;
+                }
+            }
+
+            .button {
+                margin-top: 30px;
+                height: 30px;
+                font-weight: bold;
+                cursor: pointer;
+                color: #d1411e;
+                background-color: #fff;
+            }
+
+
+
+            .payment {
+                display: flex;
+                margin-top: 10px;
+                flex-direction: column;
+
+                .payBtn {
+                    padding: 10px 5px;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                    background-color: #fff;
+                    color: teal;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+
+        .left {
+            margin-right: 0;
+
+            .table {
+                display: flex;
+                flex-direction: column;
+                border: none;
+
+                td {
+                    margin: 5px 0;
+                }
+
+                .trTitle {
+                    display: none;
+                }
+
+                .trItem {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    border: 1px solid #000;
+
+                    .price::before {
+                        content: "Price: ";
+                        font-weight: bold;
+                    }
+
+                    .quantity::before {
+                        content: "Quantity: ";
+                        font-weight: bold;
+                    }
+
+                    .total::before {
+                        content: "Total: ";
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .right {
+            .wrapper {
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+}

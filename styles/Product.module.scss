@@ -1,0 +1,113 @@
+.container {
+    height: calc(100vh - 90px);
+    margin-top: 90px;
+    display: flex;
+    position: relative;
+    padding: 30px;
+
+    .left {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 50px;
+
+        .imgContainer {
+            width: 80%;
+            height: 80%;
+            position: relative;
+        }
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+            margin-bottom: 15px;
+        }
+
+
+        .price {
+            color: #f1411e;
+            font-size: 24px;
+            font-weight: 500;
+            border-bottom: 2px solid #f1411e;
+            margin-bottom: 30px;
+            width: fit-content;
+        }
+
+        .chooseSize {
+            margin: 10px 0;
+        }
+
+        .sizes {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            .size {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2px 8px;
+                margin-right: 20px;
+                border: 1px solid #000;
+                cursor: pointer;
+            }
+        }
+
+
+        .add {
+            margin-top: 20px;
+
+            .quantity {
+                width: 50px;
+                height: 30px;
+            }
+
+            .buttonAdd {
+                height: 30px;
+                margin-left: 10px;
+                background-color: #d1411e;
+                border: none;
+                color: #fff;
+                font-weight: 500;
+                padding: 0 12px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+
+        .left {
+            margin-right: 0;
+
+            .imgContainer {
+                width: 100vw;
+                height: 60vh;
+                position: relative;
+            }
+        }
+
+        .right {
+            .price {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .sizes {
+                justify-content: space-around;
+                width: 100%;
+            }
+        }
+    }
+}
